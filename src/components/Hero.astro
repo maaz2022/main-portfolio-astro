@@ -1,0 +1,67 @@
+---
+import Logo from '../assets/icon.svg'
+import ThemeToggle from './ThemeToggle.astro'
+---
+
+<header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="index.html" role="link" class="navbar-logo">
+                <img src={Logo.src} alt="Brand" class="logo-img">
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="/src/assets/cv.pdf" download class="text-normal desktop-only">Download Resume</a>
+            <div class="theme-toggle-container desktop-only">
+                <ThemeToggle />
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1 class="heading-1">
+            Hello, everyone! You know Maaz, <span class="green">right?</span> Allow me to tell you about Maaz, a passionate <span class="violet">web developer.</span> Muhammad Maaz transforms lines of code into true digital <span class="pink">masterpieces.</span>
+            <a href="#about" role="button" class="button">
+                <span class="button-text">Learn more</span>
+                <span class="button-box-icon">
+                    <i class="ri-arrow-down-line"></i>
+                </span>
+            </a>
+        </h1>
+    </div>
+</header>
+
+<style>
+    .desktop-only {
+        display: block;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .theme-toggle-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-img {
+        filter: var(--logo-filter);
+        transition: filter 0.3s ease;
+    }
+
+    :root[data-theme="light"] {
+        --logo-filter: brightness(0) saturate(100%);
+    }
+
+    :root[data-theme="dark"] {
+        --logo-filter: brightness(0) invert(1);
+    }
+
+    @media screen and (max-width: 768px) {
+        .desktop-only {
+            display: none;
+        }
+    }
+</style>
