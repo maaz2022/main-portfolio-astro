@@ -1,16 +1,4 @@
-# Astrodev: Template
 
-A template for developers made in Astro. 🧑‍🚀
-
-```sh
-git clone https://github.com/alamguardin/astrodev.git
-```
-
-**Demo:** [Preview](https://astrodev-template.netlify.app/)
-![Thumnail](/src/assets/astrodev-thumbnail.png)
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
